@@ -1,0 +1,705 @@
+lab6:
+Low Level
+1.Multiplication Table
+number = 5
+for i in range(1, 11):
+    print(f"{number} x {i} = {number * i}")
+
+# Expected Output for number = 5:
+# 5 x 1 = 5
+# 5 x 2 = 10
+# 5 x 3 = 15
+# 5 x 4 = 20
+# 5 x 5 = 25
+# 5 x 6 = 30
+# 5 x 7 = 35
+# 5 x 8 = 40
+# 5 x 9 = 45
+# 5 x 10 = 50
+
+
+2.Print Each Fruit
+fruits = ["Apple", "Banana", "Cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Expected Output:
+# Apple
+# Banana
+# Cherry
+
+
+3.Print Even Numbers Between 1 and 20
+for i in range(1, 21):
+    if i % 2 == 0:
+        print(i)
+
+# Expected Output:
+# 2
+# 4
+# 6
+# 8
+# 10
+# 12
+# 14
+# 16
+# 18
+# 20
+
+4.Calculate Factorial
+number = 5
+factorial = 1
+for i in range(1, number + 1):
+    factorial *= i
+print(f"The factorial of {number} is {factorial}")
+
+# Expected Output:
+# The factorial of 5 is 120
+
+5.Check if a Number is Prime
+number = 29
+is_prime = True
+
+if number < 2:
+    is_prime = False
+else:
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            is_prime = False
+            break
+
+if is_prime:
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number.")
+
+# Expected Output:
+# 29 is a prime number.
+
+6.Count Vowels in a String
+string = "Artificial Intelligence and Machine Learning"
+vowels = "aeiouAEIOU"
+count = 0
+
+for char in string:
+    if char in vowels:
+        count += 1
+
+print(f"The number of vowels in the given string is {count}")
+
+# Expected Output:
+# The number of vowels in the given string is 16
+
+
+
+Medium Level
+1.Number Pattern
+for i in range(1, 10):
+    for j in range(i):
+        print(i, end=" ")
+    print()
+
+# Expected Output:
+# 1 
+# 2 2 
+# 3 3 3 
+# 4 4 4 4 
+# 5 5 5 5 5 
+# 6 6 6 6 6 6 
+# 7 7 7 7 7 7 7 
+# 8 8 8 8 8 8 8 8 
+# 9 9 9 9 9 9 9 9 9
+
+2.Star Pattern
+for i in range(1, 6):
+    print("* " * i)
+for i in range(4, 0, -1):
+    print("* " * i)
+
+# Expected Output:
+# * 
+# * * 
+# * * * 
+# * * * * 
+# * * * * * 
+# * * * * 
+# * * * 
+# * * 
+# *
+
+3.Alphabet Pattern 'D'
+for row in range(7):
+    if row == 0 or row == 6:
+        print("****")
+    else:
+        print("*   *")
+
+# Expected Output:
+# ****
+# *   *
+# *   *
+# *   *
+# *   *
+# *   *
+# ****
+
+4.Alphabet Pattern 'M'
+for row in range(7):
+    for col in range(7):
+        if col == 0 or col == 6 or (row == col and col <= 3) or (row + col == 6 and col > 3):
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+
+# Expected Output:
+# *       * 
+# *       * 
+# * *   * * 
+# *   *   * 
+# *       * 
+# *       * 
+# *       * 
+
+
+5.Alphabet Pattern 'O'
+for row in range(7):
+    for col in range(5):
+        if (row == 0 or row == 6) and (col != 0 and col != 4):
+            print("*", end="")
+        elif (col == 0 or col == 4) and (row != 0 and row != 6):
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Expected Output:
+#  *** 
+# *   *
+# *   *
+# *   *
+# *   *
+# *   *
+#  *** 
+
+
+6.Right-Angled Triangle of Numbers
+n = 5
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+
+# Expected Output:
+# 1
+# 12
+# 123
+# 1234
+# 12345
+
+
+7.Inverted Right-Angled Triangle of Stars
+n = 5
+for i in range(n, 0, -1):
+    print("*" * i)
+
+# Expected Output:
+# *****
+# ****
+# ***
+# **
+# *
+
+8.Pyramid of Stars
+n = 4
+for i in range(n):
+    print(" " * (n - i - 1) + "*" * (2 * i + 1))
+
+# Expected Output:
+#    *
+#   ***
+#  *****
+# *******
+
+9.Diamond Pattern of Stars
+n = 5
+for i in range(n):
+    print(" " * (n - i - 1) + "*" * (2 * i + 1))
+for i in range(n - 2, -1, -1):
+    print(" " * (n - i - 1) + "*" * (2 * i + 1))
+
+# Expected Output:
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#  *******
+#   *****
+#    ***
+#     *
+
+10.Right-Angled Triangle of Incrementing Numbers
+n = 5
+num = 1
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(num, end=" ")
+        num += 1
+    print()
+
+# Expected Output:
+# 1 
+# 2 3 
+# 4 5 6 
+# 7 8 9 10 
+# 11 12 13 14 15
+
+
+High Level
+1.Password Validation
+import re
+
+def validate_password(password):
+    if len(password) < 6 or len(password) > 16:
+        return "Password length must be between 6 and 16 characters."
+    if not re.search(r"[a-z]", password):
+        return "Password must contain at least one lowercase letter."
+    if not re.search(r"[A-Z]", password):
+        return "Password must contain at least one uppercase letter."
+    if not re.search(r"[0-9]", password):
+        return "Password must contain at least one number."
+    if not re.search(r"[$#@]", password):
+        return "Password must contain at least one special character from [$#@]."
+    return "Password is valid."
+
+passwords = ["Password123", "Pass123", "password", "PASSWORD123", "Pass@123"]
+for pwd in passwords:
+    print(f"Password: {pwd}, Validation: {validate_password(pwd)}")
+
+# Expected Output:
+# Password: Password123, Validation: Password must contain at least one special character from [$#@].
+# Password: Pass123, Validation: Password must contain at least one special character from [$#@].
+# Password: password, Validation: Password must contain at least one uppercase letter.
+# Password: PASSWORD123, Validation: Password must contain at least one lowercase letter.
+# Password: Pass@123, Validation: Password is valid.
+
+
+
+
+
+
+
+
+lab7:
+Low Level
+1.Function show_employee():
+
+def show_employee(name, salary=9000):
+    print(f"Employee: {name}, Salary: {salary}")
+
+show_employee("John", 5000)  # Output: Employee: John, Salary: 5000
+show_employee("Doe")  # Output: Employee: Doe, Salary: 9000
+
+
+2.Function func1():
+def func1(*args):
+    for arg in args:
+        print(arg)
+
+func1(1, 2, 3)  # Output: 1 2 3
+func1("a", "b", "c")  # Output: a b c
+
+
+3.Function to take name and age and print their values:
+
+def print_name_age(name, age):
+    print(f"Name: {name}, Age: {age}")
+
+print_name_age("Alice", 30)  # Output: Name: Alice, Age: 30
+
+
+4.Function to return a list with distinct elements:
+
+def unique_list(lst):
+    return list(set(lst))
+
+sample_list = [1, 2, 3, 3, 3, 3, 4, 5]
+print(unique_list(sample_list))  # Output: [1, 2, 3, 4, 5]
+
+
+Medium Level
+1.Function power():
+def power(base, exp=2):
+    return base ** exp
+
+print(power(3, 3))  # Output: 27
+print(power(4))  # Output: 16
+
+2.Function reverse_list():
+def reverse_list(lst):
+    return lst[::-1]
+
+print(reverse_list([1, 2, 3, 4]))  # Output: [4, 3, 2, 1]
+3.Function compute():
+
+def compute(a, b):
+    return a + b, a - b, a * b, a / b
+
+print(compute(10, 5))  # Output: (15, 5, 50, 2.0)
+
+
+4.Function student_info():
+
+def student_info(name, **kwargs):
+    info = f"Student Name: {name}"
+    for key, value in kwargs.items():
+        info += f", {key.capitalize()}: {value}"
+    print(info)
+
+student_info("John", age=15, grade='10th', school='High School')
+# Output: Student Name: John, Age: 15, Grade: 10th, School: High School
+
+5.Generator function for prime numbers:
+
+def prime_generator(limit):
+    def is_prime(n):
+        if n < 2:
+            return False
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    num = 2
+    while num <= limit:
+        if is_prime(num):
+            yield num
+        num += 1
+
+for prime in prime_generator(20):
+    print(prime)  # Output: 2 3 5 7 11 13 17 19
+
+6.Higher-order function:
+
+def apply_function(func, values):
+    return [func(value) for value in values]
+
+print(apply_function(lambda x: x * 2, [1, 2, 3, 4]))  # Output: [2, 4, 6, 8]
+
+
+7.Generator function for Fibonacci numbers:
+
+def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+fib = fibonacci_generator()
+for _ in range(10):
+    print(next(fib))  # Output: 0 1 1 2 3 5 8 13 21 34
+
+8.Recursive function for factorial:
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))  # Output: 120
+
+
+High Level
+1.Recursive function count_departments():
+
+def count_departments(department_dict):
+    count = 0
+    for sub_department in department_dict.values():
+        count += 1
+        if isinstance(sub_department, dict):
+            count += count_departments(sub_department)
+    return count
+
+org_chart = {
+    'HR': {},
+    'IT': {
+        'Development': {},
+        'QA': {}
+    },
+    'Finance': {
+        'Accounting': {},
+        'Payroll': {}
+    }
+}
+print(count_departments(org_chart))  # Output: 6
+
+
+2.Function to print Pascal's triangle:
+
+def print_pascals_triangle(n):
+    def generate_next_row(current_row):
+        return [1] + [current_row[i] + current_row[i + 1] for i in range(len(current_row) - 1)] + [1]
+
+    current_row = [1]
+    for _ in range(n):
+        print(current_row)
+        current_row = generate_next_row(current_row)
+
+print_pascals_triangle(5)
+# Output:
+# [1]
+# [1, 1]
+# [1, 2, 1]
+# [1, 3, 3, 1]
+# [1, 4, 6, 4, 1]
+
+
+
+
+
+
+
+
+lab 8: 
+Low Level
+1.Temperature Conversion Module and Usage
+
+# Module: temperature_conversion.py
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+#use_temperature_conversion.py:
+
+# Program: use_temperature_conversion.py
+import temperature_conversion as tc
+
+celsius = 25
+fahrenheit = 77
+
+print(f"{celsius}°C to Fahrenheit: {tc.celsius_to_fahrenheit(celsius)}°F")
+print(f"{fahrenheit}°F to Celsius: {tc.fahrenheit_to_celsius(fahrenheit)}°C")
+
+# Expected Output:
+# 25°C to Fahrenheit: 77.0°F
+# 77°F to Celsius: 25.0°C
+
+
+
+
+
+2.Currency Conversion Module and Usage
+
+currency_conversion.py:
+# Module: currency_conversion.py
+def usd_to_eur(usd, rate=0.85):
+    return usd * rate
+
+def eur_to_usd(eur, rate=1.18):
+    return eur * rate
+
+use_currency_conversion.py:
+# Program: use_currency_conversion.py
+import currency_conversion as cc
+
+usd = 100
+eur = 85
+
+print(f"${usd} to Euros: €{cc.usd_to_eur(usd):.2f}")
+print(f"€{eur} to USD: ${cc.eur_to_usd(eur):.2f}")
+
+# Expected Output:
+# $100 to Euros: €85.00
+# €85 to USD: $100.30
+
+
+
+Medium Level
+1.Arithmetic Operations Module and Usage
+
+arithmetic_operations.py:
+# Module: arithmetic_operations.py
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero.")
+    return a / b
+
+use_arithmetic_operations.py:
+# Program: use_arithmetic_operations.py
+import arithmetic_operations as ao
+
+a, b = 10, 5
+
+print(f"{a} + {b} = {ao.add(a, b)}")
+print(f"{a} - {b} = {ao.subtract(a, b)}")
+print(f"{a} * {b} = {ao.multiply(a, b)}")
+print(f"{a} / {b} = {ao.divide(a, b)}")
+
+# Expected Output:
+# 10 + 5 = 15
+# 10 - 5 = 5
+# 10 * 5 = 50
+# 10 / 5 = 2.0
+
+
+
+
+High Level
+Decimal and Binary Conversion Module and Usage
+
+conversion.py:
+# Module: conversion.py
+def decimal_to_binary(decimal):
+    return bin(decimal)[2:]
+
+def binary_to_decimal(binary):
+    return int(binary, 2)
+
+use_conversion.py:
+
+# Program: use_conversion.py
+import conversion
+
+decimal = 10
+binary = "1010"
+
+print(f"Decimal {decimal} to binary: {conversion.decimal_to_binary(decimal)}")
+print(f"Binary {binary} to decimal: {conversion.binary_to_decimal(binary)}")
+
+# Expected Output:
+# Decimal 10 to binary: 1010
+# Binary 1010 to decimal: 10
+
+
+
+
+
+
+lab9:
+Low Level
+1.Handle ZeroDivisionError Exception
+
+try:
+    num = 10
+    divisor = 0
+    result = num / divisor
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+# Expected Output:
+# Error: Cannot divide by zero.
+
+2.Handle ValueError Exception for Integer Input
+
+try:
+    user_input = input("Enter an integer: ")
+    user_number = int(user_input)
+    print(f"You entered the integer: {user_number}")
+except ValueError:
+    print("Error: Input is not a valid integer.")
+
+# Example Interaction:
+# Input: abc
+# Output: Error: Input is not a valid integer.
+
+3.Handle TypeError Exception for Numerical Input
+try:
+    num1 = input("Enter the first number: ")
+    num2 = input("Enter the second number: ")
+    num1 = float(num1)
+    num2 = float(num2)
+    print(f"The sum is: {num1 + num2}")
+except ValueError:
+    print("Error: Both inputs must be numbers.")
+
+# Example Interaction:
+# Input: abc, 10
+# Output: Error: Both inputs must be numbers.
+
+
+Medium Level
+1.Handle FileNotFoundError Exception
+
+try:
+    file_name = "non_existent_file.txt"
+    with open(file_name, "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("Error: The file does not exist.")
+
+# Expected Output:
+# Error: The file does not exist.
+
+2.Handle IndexError Exception
+
+my_list = [1, 2, 3]
+
+try:
+    index = int(input("Enter the index you want to access: "))
+    print(f"Value at index {index}: {my_list[index]}")
+except IndexError:
+    print("Error: Index is out of range.")
+except ValueError:
+    print("Error: Invalid input, please enter an integer.")
+
+# Example Interaction:
+# Input: 5
+# Output: Error: Index is out of range.
+
+
+High Level
+1.Handle Multiple Exceptions
+
+try:
+    my_list = [1, 2, 3]
+    file_name = "non_existent_file.txt"
+
+    # IndexError
+    index = int(input("Enter the index you want to access: "))
+    print(f"Value at index {index}: {my_list[index]}")
+
+    # FileNotFoundError
+    with open(file_name, "r") as file:
+        content = file.read()
+        print(content)
+
+    # ZeroDivisionError
+    num = 10
+    divisor = int(input("Enter a divisor: "))
+    result = num / divisor
+    print(f"Result of division: {result}")
+
+except IndexError:
+    print("Error: Index is out of range.")
+except FileNotFoundError:
+    print("Error: The file does not exist.")
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+except ValueError:
+    print("Error: Invalid input, please enter a valid number.")
+
+# Example Interaction:
+# Input for index: 5
+# Output: Error: Index is out of range.
+#
+# Input for file: (No input needed, file error occurs immediately)
+# Output: Error: The file does not exist.
+#
+# Input for divisor: 0
+# Output: Error: Cannot divide by zero.
+#
+# Input for index: abc
+# Output: Error: Invalid input, please enter a valid number.
